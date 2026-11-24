@@ -1,0 +1,259 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "join": "Join as Talent",
+    "dashboard": "Dashboard",
+    "admin": "Admin",
+    "logout": "Log Out"
+  },
+  "hero": {
+    "badge": "COLLECTIVE TALENT PLATFORM",
+    "title": "Infinity — Endless talent, one place",
+    "subtitle": "An elite collective of independent UI/UX designers, full-stack engineers, growth marketers, and creative directors delivering agency-grade work with direct freelancer agility.",
+    "cta_explore": "Explore Services",
+    "cta_contact": "Contact Us",
+    "cta_join": "Become a Member"
+  },
+  "home": {
+    "categories_title": "Core Specializations",
+    "categories_subtitle": "Browse our specialized service categories to find the exact domain expert for your next big product.",
+    "members_title": "Featured Talents",
+    "members_subtitle": "Meet the extraordinary individuals who power Infinity. Handpicked for excellence.",
+    "projects_title": "Selected Work",
+    "projects_subtitle": "Recent high-impact projects designed and engineered by our collective members.",
+    "stats": {
+      "members": "Vetted Talents",
+      "projects": "Projects Delivered",
+      "categories": "Specialized Fields",
+      "satisfaction": "Client Satisfaction"
+    },
+    "how_it_works": {
+      "title": "How Infinity Works",
+      "subtitle": "Streamlined collaboration from initial contact to project launch.",
+      "step1_title": "1. Explore Services",
+      "step1_desc": "Browse categories and inspect real portfolios and live product builds.",
+      "step2_title": "2. Select Talent",
+      "step2_desc": "Click any member to open their interactive drawer summary or full profile.",
+      "step3_title": "3. Direct Contact",
+      "step3_desc": "Send a project brief directly or initiate instant discussion on WhatsApp."
+    },
+    "cta": {
+      "title": "Ready to launch your vision?",
+      "subtitle": "Work directly with top-tier freelancers without middleman agency overhead.",
+      "button": "Request a Free Consultation"
+    }
+  },
+  "services": {
+    "title": "Service Categories",
+    "subtitle": "Discover specialized teams & freelancers organized by expertise",
+    "search_placeholder": "Search services or skills...",
+    "members_count": "{{count}} member",
+    "members_count_plural": "{{count}} members",
+    "empty": "No service categories match your search."
+  },
+  "category": {
+    "filter_all": "All Availability",
+    "filter_available": "Available Now",
+    "filter_busy": "Busy",
+    "search_members": "Search members by name or skill...",
+    "empty_members": "No talents found in this category matching your filters."
+  },
+  "drawer": {
+    "view_full_profile": "View Full Profile",
+    "send_request": "Send Request",
+    "whatsapp_chat": "Chat on WhatsApp",
+    "top_skills": "Core Skills",
+    "latest_work": "Featured Projects",
+    "availability": "Current Status",
+    "available": "Available for new projects",
+    "busy": "Currently booked"
+  },
+  "member": {
+    "years_exp": "{{count}} Year Exp",
+    "years_exp_plural": "{{count}} Years Exp",
+    "location": "Location",
+    "contact": "Get in Touch",
+    "bio": "About Me",
+    "skills": "Skills & Expertise",
+    "categories": "Specialties",
+    "projects": "Portfolio Projects",
+    "request_title": "Hire {{name}}",
+    "request_subtitle": "Fill in details to send a request to {{name}}.",
+    "no_projects": "No portfolio projects published yet."
+  },
+  "work": {
+    "title": "Portfolio Showcase",
+    "subtitle": "Explore handcrafted products, visual identities, and software applications.",
+    "filter_all": "All Categories",
+    "search_placeholder": "Search projects by title, tag, or tech stack...",
+    "by": "by",
+    "view_project": "View Project",
+    "visit_live": "Visit Live Site",
+    "empty": "No projects match your filter criteria."
+  },
+  "about": {
+    "title": "About Infinity",
+    "subtitle": "The modern freelance collective built for high-velocity teams and bold founders.",
+    "our_values": "Our Core Principles",
+    "val1_title": "Direct Collaboration",
+    "val1_desc": "Work directly with the builder, designer, or strategist without account manager delay.",
+    "val2_title": "Vetted Craftsmen",
+    "val2_desc": "Every member is hand-reviewed for technical skill, reliability, and communication.",
+    "val3_title": "Flexible & Scalable",
+    "val3_desc": "Hire an individual specialist or compose a multi-disciplinary squad for complex products.",
+    "all_members": "Meet the Collective Members"
+  },
+  "contact": {
+    "title": "Contact Infinity",
+    "subtitle": "Have a project in mind or need a team recommendation? Send us a message.",
+    "direct_contacts": "Direct Contacts",
+    "general_request": "General Service Request"
+  },
+  "form": {
+    "name": "Full Name",
+    "name_placeholder": "John Doe",
+    "email": "Email Address",
+    "email_placeholder": "john@example.com",
+    "phone": "Phone / WhatsApp",
+    "phone_placeholder": "+1 234 567 890",
+    "service": "Service Category",
+    "select_service": "Select a category",
+    "budget": "Estimated Budget",
+    "select_budget": "Select budget range",
+    "message": "Project Details & Scope",
+    "message_placeholder": "Tell us about your project goals, timelines, and requirements...",
+    "submit": "Submit Request",
+    "submitting": "Submitting...",
+    "success_title": "Request Submitted!",
+    "success_msg": "Thank you! Your request has been sent successfully. We will get back to you shortly.",
+    "also_whatsapp": "Also Send via WhatsApp",
+    "rate_limited": "Please wait a moment before sending another request."
+  },
+  "status": {
+    "available": "Available",
+    "busy": "Busy",
+    "new": "New",
+    "in_progress": "In Progress",
+    "done": "Done",
+    "pending_approval": "Pending Approval",
+    "published": "Published"
+  },
+  "auth": {
+    "login_title": "Welcome Back",
+    "login_subtitle": "Sign in to manage your Infinity profile and project requests.",
+    "register_title": "Join the Collective",
+    "register_subtitle": "Create your talent account. New accounts are reviewed by site admin before going public.",
+    "email": "Email Address",
+    "password": "Password",
+    "name": "Full Name",
+    "sign_in_button": "Sign In",
+    "register_button": "Submit Application",
+    "no_account": "Don't have an account?",
+    "have_account": "Already have an account?",
+    "demo_mode_notice": "Demo Mode Active: Supabase environment variables not detected. Demo mock accounts are preloaded for testing."
+  },
+  "dashboard": {
+    "title": "Talent Dashboard",
+    "pending_banner": "Your profile is currently under review by the Infinity admin. Once approved, your profile and projects will be visible to all visitors.",
+    "tabs": {
+      "profile": "Profile & Settings",
+      "projects": "Portfolio Projects",
+      "requests": "Service Requests"
+    },
+    "profile": {
+      "en_info": "English Information",
+      "ar_info": "Arabic Information",
+      "title_label": "Professional Title",
+      "bio_label": "Bio / About",
+      "experience": "Years of Experience",
+      "whatsapp": "WhatsApp Number",
+      "location": "Location",
+      "availability": "Availability Status",
+      "skills_label": "Skills (comma separated or enter)",
+      "socials_label": "Social & Portfolio Links",
+      "categories_label": "My Specialties",
+      "avatar": "Profile Avatar",
+      "cover": "Cover Image",
+      "save_changes": "Save Profile"
+    },
+    "projects": {
+      "add_new": "Add New Project",
+      "edit": "Edit Project",
+      "title": "Project Title",
+      "description": "Project Description",
+      "category": "Category",
+      "cover": "Cover Image",
+      "images": "Gallery Images",
+      "tags": "Tags / Tech Stack",
+      "live_url": "Live Site URL",
+      "featured": "Feature on Home",
+      "save": "Save Project",
+      "delete_confirm": "Are you sure you want to delete this project?"
+    },
+    "requests": {
+      "empty": "No service requests received yet.",
+      "client": "Client",
+      "budget": "Budget",
+      "status": "Status",
+      "reply_whatsapp": "Reply on WhatsApp"
+    }
+  },
+  "admin": {
+    "title": "Admin Console",
+    "overview": {
+      "members_count": "Total Members",
+      "pending_count": "Pending Approvals",
+      "projects_count": "Total Projects",
+      "requests_count": "Service Requests"
+    },
+    "tabs": {
+      "overview": "Overview",
+      "members": "Members",
+      "categories": "Categories",
+      "projects": "Projects",
+      "requests": "Requests",
+      "settings": "Site Settings"
+    },
+    "members": {
+      "approve": "Approve / Publish",
+      "unpublish": "Unpublish",
+      "feature": "Feature",
+      "unfeature": "Unfeature",
+      "make_admin": "Make Admin",
+      "make_member": "Make Member",
+      "delete": "Delete Profile"
+    },
+    "categories": {
+      "add_new": "Add Category",
+      "icon": "Lucide Icon Name",
+      "active": "Active Status"
+    },
+    "settings": {
+      "hero_title_en": "Hero Title (EN)",
+      "hero_title_ar": "Hero Title (AR)",
+      "hero_sub_en": "Hero Subtitle (EN)",
+      "hero_sub_ar": "Hero Subtitle (AR)",
+      "about_en": "About (EN)",
+      "about_ar": "About (AR)",
+      "site_whatsapp": "Site WhatsApp",
+      "site_email": "Site Contact Email",
+      "save": "Save Settings"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "actions": "Actions",
+    "all": "All",
+    "close": "Close",
+    "whatsapp_us": "Chat on WhatsApp"
+  }
+}
