@@ -77,6 +77,35 @@ create table if not exists public.projects (
 
 -- REQUESTS
 create table if not exists public.requests (
+  id uuid primary key default gen_random_uuid(),
+  member_id uuid null references public.profiles(id) on delete set null,
+  category_id uuid null references public.categories(id) on delete set null,
+  client_name text not null,
+  client_email text default '',
+  client_phone text default '',
+  budget text default '',
+  message text not null,
+  status text default 'new' check (status in ('new', 'in_progress', 'done')),
+  created_at timestamptz default now()
+);
+
+-- SITE SETTINGS
+create table if not exists public.site_settings (
+  id int primary key default 1 check (id = 1),
+  site_name text default 'Infinity',
+  hero_title_en text default 'Infinity — Endless talent, one place',
+  hero_title_ar text default 'إنفينيتي — مواهب بلا حدود في مكان واحد',
+  hero_subtitle_en text default 'An elite collective of independent designers, developers, and creative directors.',
+  hero_subtitle_ar text default 'نخبة من المصممين والمطورين والمبدعين المستقلين.',
+  about_en text default 'Infinity is a curated collective of top-tier freelancers.',
+  about_ar text default 'إنفينيتي تجمع نخبة من المستقلين المحترفين.',
+  whatsapp text default '201000000000',
+  email text default 'contact@infinity-talent.com',
+  socials jsonb default '{}'::jsonb,
+  logo_url text default ''
+);
+
+insert into public.site_settings (id) values (1) on conflict (id) do nothing;
 
 -- --------------------------------------------------------
 -- 2. HELPER FUNCTIONS & TRIGGERS
@@ -217,30 +246,21 @@ create policy "Site settings public select" on public.site_settings
 create policy "Site settings admin update" on public.site_settings
   for update using (public.is_admin());
 
-  id uuid primary key default gen_random_uuid(),
-  member_id uuid null references public.profiles(id) on delete set null,
-  category_id uuid null references public.categories(id) on delete set null,
-  client_name text not null,
-  client_email text default '',
-  client_phone text default '',
-  budget text default '',
-  message text not null,
-  status text default 'new' check (status in ('new', 'in_progress', 'done')),
-  created_at timestamptz default now()
-);
+-- Storage
+insert into storage.buckets (id, name, public) values ('media', 'media', true)
+on conflict (id) do update set public = true;
 
--- SITE SETTINGS
-create table if not exists public.site_settings (
-  id int primary key default 1 check (id = 1),
-  site_name text default 'Infinity',
-  hero_title_en text default 'Infinity — Endless talent, one place',
-  hero_title_ar text default 'إنفينيتي — مواهب بلا حدود في مكان واحد',
-  hero_subtitle_en text default 'An elite collective of independent designers, developers, and creative directors delivering world-class digital experiences.',
-  hero_subtitle_ar text default 'نخبة من المصممين والمطورين والمبدعين المستقلين يقدّمون تجارب رقمية فاخرة.',
-  about_en text default 'Infinity is a curated collective of top-tier freelancers collaborating under a single unified brand.',
-  about_ar text default 'إنفينيتي هي مجموعة منتقاة من أفضل الفريلانسرز يعملون بروح الفريق الواحد.',
-  whatsapp text default '201000000000',
-  email text default 'contact@infinity-talent.com',
-  socials jsonb default '{"github":"https://github.com","linkedin":"https://linkedin.com"}'::jsonb,
-  logo_url text default ''
-);
+drop policy if exists "Media public read" on storage.objects;
+create policy "Media public read" on storage.objects for select using (bucket_id = 'media');
+
+drop policy if exists "Media owner upload" on storage.objects;
+create policy "Media owner upload" on storage.objects for insert
+with check (bucket_id = 'media' and auth.uid() is not null and (storage.foldername(name))[1] = 'media' and (storage.foldername(name))[2] = auth.uid()::text);
+
+drop policy if exists "Media owner update" on storage.objects;
+create policy "Media owner update" on storage.objects for update
+using (bucket_id = 'media' and auth.uid() is not null and (storage.foldername(name))[1] = 'media' and (storage.foldername(name))[2] = auth.uid()::text);
+
+drop policy if exists "Media owner delete" on storage.objects;
+create policy "Media owner delete" on storage.objects for delete
+using (bucket_id = 'media' and auth.uid() is not null and (storage.foldername(name))[1] = 'media' and (storage.foldername(name))[2] = auth.uid()::text);
